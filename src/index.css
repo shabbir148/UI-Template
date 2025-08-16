@@ -1,13 +1,229 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: white;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.the-use-case {
+  font-size: 26px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.blue-bar {
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  background: #2156f3;
+  margin-right: 8px;
+}
+
+.content {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Left Panel */
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  gap: 10px;
+
+}
+
+.card-icon {
+  color: #2156f3;
+  font-size: 28px;
+}
+
+/* Right Panel */
+.right-panel-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 2px;
+  background-color: white;
+  
+}
+.right-panel-border {
+  border: 1px solid #d1d1d1; /* light gray border */
+  padding: 4px;
+    border-radius: 12px;
+
+}
+
+.right-panel {
+    border: 1px solid #d1d1d1; /* light gray border */
+  
+  background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 24px,
+      rgba(0, 0, 0, 0.02) 25px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 24px,
+      rgba(0, 0, 0, 0.02) 25px
+    );
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  background-color: #eef0f2;
+  
+}
+
+/* Waveform + Tag */
+.waveform {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.wave {
+  height: 26px;
+  width: 110px;
+  background: repeating-linear-gradient(
+    to right,
+    #2156f3,
+    #2156f3 3px,
+    transparent 3px,
+    transparent 6px
+  );
+}
+
+.tag {
+  padding: 24px 40px;
+  border: 1px solid #2156f3;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #2156f3;
+  background: white;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Arc & Call Button */
+.arc-container {
+  position: relative;
+}
+
+.arc-svg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top:30px
+}
+
+.call-btn {
+  background: #d7f62d;
+  border: 3px solid #c0d41c;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+  position: relative;
+}
+
+
+/* @keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(215, 246, 45, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(215, 246, 45, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(215, 246, 45, 0);
+  }
+} */
+
+/* Text + Timer */
+.call-text {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #000;
+  font-weight: 500;
+}
+
+.timer {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 5px 14px;
+  background: #2156f3;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Try Asking */
+.try-asking {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+/* Example Bubble */
+.example-bubble {
+  margin-top: 12px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Button */
+.btn-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.end-call-btn {
+  background: #2156f3;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 14px 26px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.end-call-btn:hover {
+  background: #1744c8;
 }
